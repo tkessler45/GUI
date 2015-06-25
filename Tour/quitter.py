@@ -3,8 +3,8 @@ __author__ = 'tkessler'
 from tkinter import *
 from tkinter.messagebox import askokcancel
 
-class Quitter(Frame):
-    def __init__(self, parent=None):
+class Quitter(Frame): #in separate frame when instance mainloop is called...
+    def __init__(self, parent=None): #default in no parent frame...
         Frame.__init__(self, parent)
         self.pack()
         widget = Button(self, text="Quit", command=self.quit)
