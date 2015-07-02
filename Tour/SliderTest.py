@@ -6,7 +6,7 @@ from Tour.quitter import Quitter
 class fineslider(Frame):
     def __init__(self, parent=None, **Options):
         Frame.__init__(self, master=parent, **Options)
-        self.pack()
+        self.pack(expand=YES, fill=X, padx=5)
         self.var = DoubleVar()
         tickint = 100
         rangemax = 100
@@ -28,11 +28,8 @@ class fineslider(Frame):
         #print(var)
 
 if __name__ == "__main__":
-    #fineslider().mainloop()
+    fineslider().mainloop()
 
-    root = Tk()
-    fineslider(root).pack(expand=YES, fill=X) #fills and expands in root frame...
-    root.mainloop()
 
     # root = Tk()
     # scl = Scale(root, from_=-100, to=100, tickinterval=50, resolution=10, orient='horizontal').pack(expand=YES, fill=X)
